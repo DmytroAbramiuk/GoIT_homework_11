@@ -1,8 +1,6 @@
 package Task_5;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Stream;
 
 public class StreamZipper {
@@ -16,6 +14,8 @@ public class StreamZipper {
             result.add(firstIterator.next());
             result.add(secondIterator.next());
         }
+
+        Collections.shuffle(result);
 
         return result.stream();
     }

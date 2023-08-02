@@ -4,5 +4,5 @@ import java.util.List;
 
 public interface NamesByOddIndexes {
 
-    List<String> getNames();
+    String getNames();
 }

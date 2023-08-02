@@ -12,11 +12,11 @@ public class NamesByIndexes implements NamesByOddIndexes{
     }
 
     @Override
-    public List<String> getNames() {
+    public String getNames() {
         return IntStream
                 .range(0, nameList.size())
                 .filter(index -> index % 2 != 0)
                 .mapToObj(index -> (index) + ". " + nameList.get(index))
-                .collect(Collectors.toList());
+                .collect(Collectors.joining(", "));
     }
 }
